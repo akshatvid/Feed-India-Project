@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment | Feed India</title>
+<link rel="shortcut icon" href="assets/logo4.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/cssstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Arimo|Grenze|Quicksand|Ubuntu|Hepta+Slab&display=swap" rel="stylesheet">
+<style>
+body  {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("assets/p.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+body {
+  font-family: 'Hepta Slab', serif;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  font-family: 'Hepta Slab', serif;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  position: absolute;
+  z-index: 1;
+  height: auto;
+  width: 35%;
+  left: 32.5%;
+  top: 16%;
+  margin-bottom: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-align: center;
+  padding-bottom: 20px;
+  transition: 0.5s;
+}
+
+input[type=text] {
+  width: 70%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: 'Hepta Slab', serif;
+}
+
+input[type=submit]{
+  font-family: 'Hepta Slab', serif;
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #000000;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 20px;
+  width: 50%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+
+</head>
+<body>
+	<header>
+		<img style="height:100%;width:14%" src="assets/logo4.png">
+	 	<ul id="head_ul">
+	 		<a href="/index"> 
+	 			<li class="head_li">Home</li>
+	 		</a>
+	 		<a href="/about">
+	 			<li class="head_li">About us</li>
+	 		</a>
+	 		<a href="/donate">
+	 			<li class="head_li" style="background:white;color:black;">Donate</li>
+	 		</a>
+			<a href="/contact">
+		 		<li class="head_li">Contact us</li>
+		 	</a>
+		 	<a href="/login">
+		 		<li class="head_li">Login</li>
+		 	</a>
+	 	</ul>
+	</header>
+<br> <br> <br> <br> <br>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="thanks.html">
+        <div class="row">
+          
+
+          <div class="col-50">
+            <h1>Payment Portal</h1>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname">
+            <label for="ccnum">Card number</label>
+            <input type="text" id="ccnum" name="cardnumber">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv">
+              </div>
+            </div>
+          </div>
+        </div>
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
+    </div>
+  </div>
+</div>
+<footer>
+		<p style="text-align: center;">© Feed India Pvt. Ltd.</p>
+	</footer>
+<script>
+function cardnumber(inputtxt)
+{
+  var cardno = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+  if(inputtxt.value.match(cardno))
+        {
+      return true;
+        }
+      else
+        {
+        alert("Not a valid card number!");
+        return false;
+        }
+}
+function ValidateEmail(inputText)
+{
+var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+if(inputText.value.match(mailformat))
+{
+alert("Valid email address!");
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form1.text1.focus();
+return false;
+}
+}
+function phonenumber(inputtxt)
+{
+  var phoneno = /^\d{10}$/;
+  if((inputtxt.value.match(phoneno))
+        {
+      return true;
+        }
+      else
+        {
+        alert("message");
+        return false;
+        }
+}
+function expdate(inputtxt)
+{
+if(exMonth.selectedIndex<month && exYear.selectedIndex<=year)
+{
+    alert("Please enter a valid expiration date");
+    return false;
+}
+else
+{
+return true;
+}
+}
+function cvv(inputtxt)
+{
+var cvvalid = /^[0-9]{3,4}$/;
+if((inputtxt.value.match(cvvalid))
+        {
+      return true;
+        }
+      else
+        {
+        alert("message");
+        return false;
+        }
+}                                                                                                                          
+</script>
+</body>
+</html>

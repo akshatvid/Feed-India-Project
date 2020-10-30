@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up | Feed India</title>
+    <link rel="shortcut icon" href="assets/logo4.png" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Grenze|Quicksand|Ubuntu|Hepta+Slab&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/login.jpeg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #container {
+            position: absolute;
+            height: 72%;
+            width: 35%;
+            left: 32.5%;
+            top: 16%;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid transparent;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #form {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+ 
+        input[type="text"],
+        input[type="password"] {
+            padding: 7px 10px;
+            font-size: 20px;
+            margin: 10px 10px;
+            width: 80%;
+            outline: 0;
+            border: 0px transparent;
+            border-radius: 10px;
+            font-family: "Ubuntu";
+        }
+
+        #logo {
+            margin-top: 5px;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-family: "Ubuntu";
+        }
+
+        input[type="submit"] {
+            margin-top: 25px;
+            padding: 10px;
+            font-size: 20px;
+            margin: 22px 10px 10px 10px;
+            width: 80%;
+            outline: 0;
+            border: 0px transparent;
+            border-radius: 10px;
+            font-family: "Ubuntu";
+        }
+
+        input[type="submit"]:hover {
+            opacity: 0.8;
+            transition: 0.2s;
+        }
+
+        h2 {
+            font-family: 'Hepta Slab', serif;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            font-size: 200%;
+        }
+    </style>
+</head> 
+<body>
+ <header>
+        <img style="height:100%;width:14%" src="assets/logo4.png">
+        <ul id="head_ul">
+            <a href="/index"> 
+                <li class="head_li">Home</li>
+            </a>
+            <a href="/about">
+                <li class="head_li">About us</li>
+            </a>
+            <a href="/donate">
+                <li class="head_li">Donate</li>
+            </a>
+            <a href="/contact">
+                <li class="head_li">Contact us</li>
+            </a>
+            <a href="/inform">
+                <li class="head_li">Inform</li>
+            </a>
+            <a href="/login">
+                <li class="head_li" style="background:white;color:black;">Login</li>
+            </a>
+        </ul>
+    </header>
+    <div id="container">
+        <div id="form">
+            <form action="/login" method="POST">
+                <h2>Sign Up</h2>
+                <div style="display: inline;margin:10px 10px">
+                    <input type="text" style="width:37%" name="user[first_name]" required placeholder="First Name">
+                    <input type="text" style="width:37%" name="user[last_name]" required placeholder="Last Name"><br>
+                </div>
+                <input type="text" name="user[username]" required placeholder="Username"><br>
+                <input type="password" name="user[password]" required placeholder="Password"><br><br>
+                <input type="checkbox" style="margin-left:0px" required name="" id="">
+                 I accept the 
+                <span style="color:rgb(33, 112, 214)">
+                Terms Of Use
+                </span> and <span style="color:rgb(33, 112, 214)">Privacy Policy</span>.
+                <input type="submit" value="Join Now" style="color:white;background:#000000;"> 
+                <p>Already have an account? <span><a href="/login">Login</a></span></p>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p style="text-align: center;">© Feed India Pvt. Ltd.</p>
+    </footer>
+</body>
+</html> 
